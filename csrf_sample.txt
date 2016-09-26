@@ -1,0 +1,34 @@
+1. User is logged in to the vulnerable site.
+2. That simply  means the user has an autheicated session with that vulnerable site.
+3. Again that means the user's browser will have an Auth Cookie with that vulnerable site.
+4. Auth cookie gets sent to the vulnerable site's server for every request.
+5. User goes to Facebook and click a malicious link.
+6. User gets in to the attacker site which says, Win an iPhone by clicking on the submit button.
+7. User clicks on the submit button and it says - Congrats, you have won and you will hear back from us soon.
+8. This is what the attacker site would have got in its html markup.
+
+<html>
+<head></head>
+<title></title>
+<form action = "https://vulnerablesite.com/account/changePassword" method="POST" target="hiddenFrame" >
+<input type="hidden" value = "newpwd" name="password">
+<input type = "hidden" value = "newpwd" name = "password">
+<input type = "submit" name = "submit" value="Click To Win" onClick= alert('You won') />
+</form>
+<iframe name = "hiddenFrame" style="disaplay:none"/>
+
+Ways to Prevent
+Use the Anti-Forgery CSRF Token
+
+Comprises of the following:
+1. Cookie with the __RequestVerificationToken 
+2. Hidden form field / Request Header / Query String with the __RequestVerificationToken
+3. The Cookie info and the form field info are paired in some form and encrypted so that the csrf token itself cant be forged.
+4. The token is linked to that specific user in some form.
+
+CSRF can happen on API as well and not limited only to Forms.
+
+Attacker sees the following:
+No CSRF token found.
+CSRF token not able to encrypt
+CSRF token not matching.
