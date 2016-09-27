@@ -1,0 +1,12 @@
+SSL Basics
+
+History
+Record Protocol
+Full Handshake
+Abbreviated Handshake or ssl resumption
+Key Exchange
+Certificate Authentication 
+Certificate Revocation - CRL, OCSP , stapling
+Convergence and DNSSEC
+Handshake again
+Alerts (close_notify)
