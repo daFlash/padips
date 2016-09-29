@@ -1,1 +1,32 @@
+Types of ciphers - Very Generic and Basic
+
+Symmetric encryption ciphers come in two basic types:
+  Substitution Ciphers
+    Replaces bits, characters and blocks of characters with other bits, characters and blocks of characters.
+  Transposition Ciphers
+    Moves around the bits, characters and blocks of characters.
+
+How does that help practically?
+Let's say your input text is "arun" and you pass it through your encryption algorithm and if the output is "ctwp" then the algorithm for your function is the alphabet that resides at two places away from your given character. In other words, the entire alphabet set would be your algorithm. The key is additional input that the user would give to define that each characters needs to be advanced by 2 characters.
+This is indeed for Substitution cipher.
+In case of Transposition cipher, the input "arun" would result to "nrau" where the characters are scrambled. Imagine both these happening together for the given input. That's what happens while you try to perform encryption.
+This is a way too simple explanation of how the substitution and transposition is taking place. In real encryption algorithms, its quite complicated. Mathematical functions are applied to make long sequences of complicated substitutions and transpositions.
+
+Here's the visual representation of how the algorithm will look like internally --
+f(9) f(2) f(5)
+f(1) f(3) f(8)
+f(4) f(7) f(6)
+
+Imagine an input going through 4 of the above functions randomly based on the key. That's what happens inside an encryption algorithm.
+The key dictates which are the boxes through with the input data would traverse therby applying the defined set of complex substitutions and transpositions.
+Key adds the randomness to the encryption algorithm.
+
+What is frequency Analysis?
+Let's say the most used vowel in English is "E" and if the input consists of too many "E's" then the encrypted output might contain a pattern of 8 bits which will the attacker a foothold. This shouldn't be allowed to happen and complex substitutions and complex transpositions in modern encryption algorithms can defend Frequency Analysis pretty easily.
+
+Key Derivation Functions
+The functions that can create a high - entropy keys(highly random) from a given master(common) key. These keys created from a master key is called subkeys. KDFs are used to created passwords/hashes or salts and then run them through multiple sequentical processes.
+
+
+
 
