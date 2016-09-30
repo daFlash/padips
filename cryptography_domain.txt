@@ -27,6 +27,18 @@ Let's say the most used vowel in English is "E" and if the input consists of too
 Key Derivation Functions
 The functions that can create a high - entropy keys(highly random) from a given master(common) key. These keys created from a master key is called subkeys. KDFs are used to created passwords/hashes or salts and then run them through multiple sequentical processes.
 
+Symmetric Keys
+Each pair of users need to maintain two instances of the same key.
+  Symmetric keys advantages:
+    1. Scream in speed
+    2. Used for confidentiality of large amounts of data.
+    3. Computationally less intensive.
 
+  Disadv:
+    1. Keys need to be kept securely.
+    2. n(n-1)/2 For 10 users, 10(9)/2 = 45 keys
+    3. Only confidentialty and no authentication and non-repudiation.
+    
+Asymmetric Cryptography
 
 
