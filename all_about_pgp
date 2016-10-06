@@ -1,0 +1,33 @@
+Pretty Good Privacy is an encryption software that provides cryptographic privacy and authentication. Freeware developed by Phil Zimmerman.
+
+Often used for encryption, decryption, signing of files, directories, Filesystem (whole disk encryption), secure email communications.
+
+Follows OpenPGP standard.
+
+PGP was said to be using the popular system named as Web Of Trust (A knows B so A sends her public key to B and B signs it and keeps a copy of it. C doesn't know A but C knows B
+and B's public key is with C as they have communicated before. Hence, on word of trust from B, C now can trust A as well and start communicating). 
+The Web of Trust was quite contrary to the hierarchical system that was used in x.509 systems where all of them don't trust each other but only trust the CA.
+
+Backward compatibility in PGP is poor.
+
+PGP exchanges messages using Digital Envelopes.
+
+PGP has its own digital certificates but not similar to x.509 certificates that come in PKI.
+
+The user's private key is generated and encrypted when the applications asks the user to randomly type something in the keyboard.
+PGP uses passphrases instead of passwords that is used to encrypt the private key that was generated.
+Keyring is the file in one's system that will have the list of  public keys that are good and trustworthy from the past communications. It will have a parameter
+that defines the Level of Trust too with which you can sign one's public key.
+
+Advantages:
+Free
+Complete cryptosystem
+Ease of Use.
+
+Disadvantages:
+Revocation percolation is difficult.
+Backward compatibility is poor.
+
+Quantum Cryptography
+Its all about photon guns, electromagnetic waves and the polarization of photons which could be either horizontal, veritical, left handed or right handed.
+Even passively eavesdropping / sniffing is enough to change the attributes of polarization so detection is easily possible.
