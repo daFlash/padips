@@ -1,0 +1,7 @@
+S-MIME stands for Secure Multimedia Internet Mail Extensions.
+
+Uses PKCS for Security.
+Confidentialy achieved using Symmetric Algorithms
+Integrity achieved using Hashing algos.
+Authentication achieved using x.509 certs
+Non-Repudiation achieved using Signing.
