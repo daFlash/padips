@@ -1,0 +1,54 @@
+Humans are not as good as computers in remembering a whole bunch of IP addresses for their favourite site. This led to the invention
+of DNS that can map the IP address to a specific hostname or domain name.
+This again led to a whole bunch of security issues.
+
+DNS can have two types of security issues:
+1. On the grounds of how DNS works (attackers use the protocols)
+2. On the grounds of DNS having weak s/w, services, vulnerabilities in the server hosting DNS itself.
+
+How DNS works first of all?
+
+www.mail.yahoo.com (lets say client is looking for server1)
+
+starts with .com(Root Zone - which has info on .com based servers - basically a directory service maintained by VeriSign Corp.) 
+and walks down the tree.
+
+It bumps in to different domains where yahoo.com is one of them and asks for how to go to mail.yahoo.com (second level)
+
+meets a node with web.yahoo.com or mail.yahoo.com and moves down further to mail server (third level)
+
+which will have server1.mail.yahoo.com or server2.mail.yahoo.com and finds the server 1
+
+Authoritative Name server will actually have the Name-IP mapping but the search from the client's DNS will start and walk down 
+iteratively and recursively until it reaches the Authoritative Name Server.
+
+When a DNS query is made to a DNS server, it it has the information in the cache it will provide it to the caller but if it doesn't then it
+will simply provide a referral indicating the DNS server that might know about the requested Name-IP mapping.
+
+DNS Protocol Attacks
+
+DNS Cache poisoning - where the cache is poisoned with the wrong information about the name-IP mapping thus all client's requests will be
+made to point to the attacker's IP when a specific domain is requested.
+
+DNS Spoofing - Attacker will make the domain lookup response appear as though its coming from the correct DNS service but actually it would
+be framed and sent by the attacker himself.
+
+DNS ID Hacking - This needs to be done for the DNS spoofing to take place.
+
+DNS Server attacks
+1. Exploiting vuln in the DNS server itself (something like Buffer OverFlow etc.)
+2. DDoS - Smurf Attack (pointing the source IP to victim IP and sending a lot of ICMP packets )
+
+DNSSEC
+(Domain Name System Security Extension)
+Signing of Root is necessary to prevent DNS attacks . Root signs the rest of the servers all the way down the hierarchy.
+Signing of Root will provide authentication of the root to the client that is trying to connect with the DNS.
+
+What if the signing key is compromised?
+So DNSSEC uses KSK (key signing Key) a long term key and ZSK (Zone Signing Key) which is a short term key.
+
+
+
+
+
+
