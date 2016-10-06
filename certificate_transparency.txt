@@ -1,0 +1,34 @@
+Certificate transparency is an Open Framework where multiple bodies can keep a check on each other.
+
+3 mail goals of Certificate Transparency :
+-- > Make issuance of certificate to a domain extremely difficult and with lot of friction where the the cert cannot be issued without
+     the domain owner getting to know about it by some means.
+-- > Open Auditing & Monitoring by multiple bodies or by any one.
+-- > Protect the users by all means possible.
+
+How does Certificate Transparency work ?
+
+It constitutes the following :
+1. Certifcate Logs
+Dedicated servers that maintain logs of the certificates that were issued and their status/ validity.
+2. Monitors
+Dedicated servers that can be started up by anybody that keeps a tab/check on the Certificate Log servers.
+3. Auditors
+Light weight software components that check on the following :
+  -- Whethere logs are correct and behaving as expected.
+  -- Particular cert is present in the Log.
+  
+Who maintains the above?
+Mostly the CAs or the ISPs maintain but its not restricted and anyone interested can own dedicated servers to ensure the above is taken care.
+
+What are we guarding or preventing from happening?
+Rogues CAs
+Misused certificates
+Malicious Certs
+
+What is the point of having this? How is it helping?
+
+Quick Mitigation
+Quick Detection
+Quick revocation
+
