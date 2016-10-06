@@ -1,0 +1,44 @@
+Here are the list of Security Headers that can be set by the server in the response header list.
+
+1. HSTS header (HTTP Strict Transport Security)
+Server cant have http references of content in its response, it will get redirected to https automatically
+Client will not be able to hit http by himself
+Even if MITM tries to give a fake cert to user thinking user might accept the bad cert, HSTS will prevent the user from accepting.
+Domain owners can go and register in hstspreload site telling their website is always on https(chrome,safari and firefox) supports it.
+
+2. X-XSS-Protection
+Can have the following values -
+0 (disabled)
+1 (enabled)
+1;mode=block
+1;report-uri=http://yourdomaintoreport.com
+
+3. CSRF header
+
+4. X-Frame-Options
+This is to prevent Click-Jacking attack where the server is telling the client browser not to allow the browser to load this page as
+frames in another web page.
+
+Here are the options:
+deny
+sameorigin
+allow-origin: DOMAIN
+
+5. X-Permitted-Cross-Domain-Policies
+none
+master
+all
+filename
+
+Basically its a policy xml file that says the web clients (like Adobe Flash) can access content from another domain.
+
+6. HPKP (HTTP Public Key Pinning)
+The server adds this header with the public key's hash / fingerprint so that the client can verify. 
+This says that there is a pinning to point out the association between the server's public key and the certificate that the server sent.
+This is used to prevent MITM.
+Risky stuff and there should be enough Organizational maturity to carry this out else they(service owners) will make themselves unavailable.
+
+7. Content Security Policy
+script-src 'self'
+style-src 'self'
+img-src 'self'
