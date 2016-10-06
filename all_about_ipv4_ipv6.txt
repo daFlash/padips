@@ -1,0 +1,28 @@
+IP v4
+
+IP version 4 addresses have run out due to the number of machines in the internet as of today.
+They are 32 bit addresses with 4 octets which is 8 bit each.
+
+Classful IP address scheme (Subnetting)
+Class A - 0.0.0.0 - 127.255.255.255 (First octet represents the Network and the last 3 represent the Host machine in the network) 
+Class B - 128.0.0.0 - 191.255.255.255 (First 2 octets represent the n/w and last 2 represent the host).
+Class C - 191.0.0.0 - 223.255.255.255 ( First 3 represent the n/w and the last one represents the host).
+Class D - 224.0.0.0 - 239.255.255.255 (Used for multicast address)
+Class E - 240.0.0.0 - 255.255.255.255 (Used for research purpose)
+
+Classless InterDomain Routing (CIDR)
+also called supernetting where each of the above classes can be made more flexible in terms of number of machines.
+
+
+ipV6 or IPng (IP next gen)
+Supports 128 bit address.
+Supports IPSec
+Supports QoS
+Supports increased MTU (maximum transmission Unit)
+
+Supports jumbograms where the size of the packet is not limited just to 65535 octets of payload.
+
+NAT (Network Address Translation) is there which is slowing down IPv6 adoption. Many IPs behind a specific single IP. The single IP will ensure 
+packet forwarding and port forwarding to the right client which made the request.
+
+
